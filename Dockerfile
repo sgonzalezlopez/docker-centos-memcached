@@ -12,8 +12,6 @@ RUN yum install -y memcached
 # Port to expose *outside* the container
 EXPOSE 11211
 
-# User to run memcached as
-USER memcached
 
 # Service to run
-ENTRYPOINT ["/usr/bin/memcached"]
+CMD ["/usr/bin/memcached", "-d", "-p", "11211", "-u", "memcached", "-m", "64", "-c", "1024"]
