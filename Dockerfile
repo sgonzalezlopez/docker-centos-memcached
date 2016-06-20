@@ -5,7 +5,7 @@ FROM centos
 MAINTAINER Jete O'Keeffe <https://github.com/jeteokeeffe/docker-centos-memcached>
 
 # Setup Memcached
-RUN rpm -Uvh http://mirror.metrocast.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
+#RUN rpm -Uvh http://mirror.metrocast.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN yum update -y
 RUN yum install -y memcached
 
