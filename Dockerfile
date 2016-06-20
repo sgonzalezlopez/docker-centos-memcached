@@ -13,4 +13,4 @@ RUN yum install -y memcached
 EXPOSE 11211
 
 # Service to run
-#CMD /usr/bin/memcached -d -p 11211 -u memcached -m 64 -c 1024
+ENTRYPOINT ["/usr/bin/memcached -d -p 11211 -u memcached -m 64 -c 1024"]
